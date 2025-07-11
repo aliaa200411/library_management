@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <menuitem id="menu_library_root" name="📚 Library"/>
+
+    <menuitem id="menu_library_books"
+              name="📖  Books"
+              parent="menu_library_root"
+              action="action_books"/>
+
+    <menuitem id="menu_library_authors"
+              name="🧑‍🏫  Authors"
+              parent="menu_library_root"
+              action="action_authors"/>
+
+    <menuitem id="menu_library_borrowings"
+              name="📄 Borrowing Records"
+              parent="menu_library_root"
+              action="action_borrowings"/>
+
+</odoo>
