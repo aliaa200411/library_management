@@ -1,5 +1,6 @@
 from odoo import models, fields, api
-from datetime import date, timedelta
+from odoo.exceptions import ValidationError
+from datetime import timedelta
 
 class LibraryBorrowing(models.Model):
     _name = 'library.borrowing'
@@ -16,7 +17,28 @@ class LibraryBorrowing(models.Model):
         if self.borrow_date:
             self.return_date = self.borrow_date + timedelta(days=7)
 
+    @api.model
+    def create(self, vals):
+        book = self.env['library.book'].browse(vals['book_id'])
+        if not book.is_available:
+            raise ValidationError("This book is already borrowed and not available.")
+        record = super(LibraryBorrowing, self).create(vals)
+        book.write({'is_available': False})
+        return record
+
     def action_mark_returned(self):
         for record in self:
             if not record.returned:
                 record.returned = True
+                book.write({'is_available': True})
+
+    @api.constrains('book_id')
+    def _check_duplicate_borrowing(self):
+        for record in self:
+            ongoing = self.search([
+                ('book_id', '=', record.book_id.id),
+                ('returned', '=', False),
+                ('id', '!=', record.id)
+            ])
+            if ongoing:
+                raise ValidationError("This book is already borrowed and has not been returned yet.")
