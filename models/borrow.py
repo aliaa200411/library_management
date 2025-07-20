@@ -30,7 +30,7 @@ class LibraryBorrowing(models.Model):
         for record in self:
             if not record.returned:
                 record.returned = True
-                book.write({'is_available': True})
+            record.book_id.write({'is_available': True})
 
     @api.constrains('book_id')
     def _check_duplicate_borrowing(self):
