@@ -9,11 +9,12 @@
         <field name="arch" type="xml">
             <form string="📄 Borrowing Form">
                 <header>
-                <button name="action_mark_returned"
+                    <button name="action_mark_returned"
                         type="object"
                         string="✅ Mark as Returned"
                         class="btn-primary"
-                        visible="not returned"/>
+                        attrs="{'invisible': [('returned', '=', True)]}"/>
+
                 </header>
                 <sheet>
                     <group>

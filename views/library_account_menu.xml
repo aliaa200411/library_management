@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem 
+        id="menu_library_under_account" 
+        name="📚 Library" 
+        parent="account.menu_finance"
+        sequence="90"
+        groups="account.group_account_user" />
+
+    <menuitem 
+        id="menu_books_in_accounting" 
+        name="📖 Books"
+        parent="menu_library_under_account" 
+        action="action_library_book"
+        sequence="1"
+        groups="account.group_account_user" />
+
+    <menuitem 
+        id="menu_members_in_accounting" 
+        name="👥 Members"
+        parent="menu_library_under_account" 
+        action="action_library_members"
+        sequence="2"
+        groups="account.group_account_user" />
+
+    <menuitem 
+        id="menu_membership_invoices" 
+        name="🧾 Invoices"
+        parent="menu_library_under_account" 
+        action="action_membership_invoices"
+        sequence="3"
+        groups="account.group_account_user" />
+</odoo>

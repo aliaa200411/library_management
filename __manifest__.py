@@ -4,14 +4,19 @@
     'summary': 'Manage books, authors, and borrowing in a library',
     'author': 'Aliaa Al_Troun',
     'category': 'Tools',
-    'depends': ['base'],
+    'license': 'LGPL-3',
+    'depends': ['base', 'contacts', 'account', 'product'],
     'data': [
         'security/ir.model.access.csv',
         'views/book_views.xml',
         'views/author_views.xml',
         'views/borrowing_views.xml',
+        'views/library_actions.xml',
+        'views/library_account_menu.xml',
         'views/library_menu.xml',
-
+        'views/membership_views.xml',
+        'views/product_views.xml',
+        'views/res_partner_views.xml'
     ],
     'installable': True,
     'application': True,

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="action_library_members" model="ir.actions.act_window">
+        <field name="name">👥 Library Members</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('is_library_member', '=', True)]</field>
+    </record>
+
+    <record id="action_library_membership" model="ir.actions.act_window">
+        <field name="name">📝 Membership Requests</field>
+        <field name="res_model">library.membership</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <record id="action_library_invoices" model="ir.actions.act_window">
+        <field name="name">🧾 Library Membership Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('invoice_line_ids.product_id.is_membership_product','=',True)]</field>
+    </record>
+
+
+     <record id="action_membership_invoices" model="ir.actions.act_window">
+        <field name="name">🧾 Membership Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[
+            ('invoice_line_ids.product_id.is_membership_product', '=', True),
+            ('move_type', '=', 'out_invoice')
+        ]</field>
+    </record>
+</odoo>
