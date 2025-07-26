@@ -10,15 +10,19 @@
                 <field name="is_library_member" string="📚 Is Library Member?"/>
             </xpath>
 
-            <xpath expr="//header" position="inside">
+            <xpath expr="//div[@class='oe_button_box']" position="inside">
                 <button name="action_view_library_memberships"
                         type="object"
                         string="👥 Memberships"
                         class="oe_stat_button"
                         icon="fa-users"
-                        attrs="{'invisible': [('library_memberships_count', '=', 0)]}"/>
-                <field name="library_memberships_count" widget="statinfo" string="👥 Memberships"/>
+                        invisible="library_memberships_count == 0"/>
+
+                <field name="library_memberships_count"
+                       widget="statinfo"
+                       string="👥 Memberships"/>
             </xpath>
+
         </field>
     </record>
 </odoo>

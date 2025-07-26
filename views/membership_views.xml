@@ -27,13 +27,16 @@
                         </page>
                     </notebook>
 
-                    <footer>
-                        <button name="action_confirm" type="object" string="✅ Confirm"
-                                class="btn-primary"
-                                attrs="{'invisible': [('state', '!=', 'draft')]}"/>
-                        <button name="action_mark_paid" type="object" string="💰 Mark as Paid"
-                                attrs="{'invisible': [('state', '!=', 'confirmed')]}"/>
-                    </footer>
+                 <header>
+                    <button name="action_confirm" type="object" string="✅ Confirm"
+                            class="btn-primary"
+                            invisible="state != 'draft'"/>
+                    <button name="action_mark_paid" type="object" string="💰 Mark as Paid"
+                            invisible="state != 'confirmed'"/>
+                    <button name="action_view_invoice" type="object" string="📄 View Invoice"
+                            invisible="not invoice_id"/>
+                 </header>
+
                 </sheet>
             </form>
         </field>

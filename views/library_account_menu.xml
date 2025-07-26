@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <menuitem 
         id="menu_library_under_account" 
@@ -11,7 +10,7 @@
         id="menu_books_in_accounting" 
         name="📖 Books"
         parent="menu_library_under_account" 
-        action="action_library_book"
+        action="action_books"
         sequence="1"
         groups="account.group_account_user" />
 

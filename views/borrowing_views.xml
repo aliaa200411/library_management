@@ -13,13 +13,15 @@
                         type="object"
                         string="✅ Mark as Returned"
                         class="btn-primary"
-                        attrs="{'invisible': [('returned', '=', True)]}"/>
+                        invisible="returned == True"/>
+
 
                 </header>
                 <sheet>
                     <group>
                         <field name="book_id" string="📖 Book"/>
                         <field name="borrower_id" string="🙋‍♂️ Borrower"/>
+                        <field name="card_id" readonly="1"/>
                         <field name="borrow_date" string="📅 Borrow Date"/>
                         <field name="return_date" string="📅 Return Date"/>
                         <field name="returned" string="🔁 Returned?"/>
