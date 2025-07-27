@@ -4,7 +4,8 @@
         name="📚 Library" 
         parent="account.menu_finance"
         sequence="90"
-        groups="account.group_account_user" />
+        groups="base.group_user"
+ />
 
     <menuitem 
         id="menu_books_in_accounting" 
@@ -12,7 +13,8 @@
         parent="menu_library_under_account" 
         action="action_books"
         sequence="1"
-        groups="account.group_account_user" />
+        groups="base.group_user"
+ />
 
     <menuitem 
         id="menu_members_in_accounting" 
@@ -20,7 +22,8 @@
         parent="menu_library_under_account" 
         action="action_library_members"
         sequence="2"
-        groups="account.group_account_user" />
+       groups="base.group_user"
+ />
 
     <menuitem 
         id="menu_membership_invoices" 
@@ -28,5 +31,6 @@
         parent="menu_library_under_account" 
         action="action_membership_invoices"
         sequence="3"
-        groups="account.group_account_user" />
+       groups="base.group_user"
+ />
 </odoo>

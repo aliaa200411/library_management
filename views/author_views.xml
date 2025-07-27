@@ -14,7 +14,7 @@
                         <field name="nationality" string="🌍 Nationality"/>
                         <field name="email" string="📧 Email"/>
                     </group>
-                                
+                            
                     <notebook>
                         <page string="📚 Books by Author">
                             <field name="book_ids">
