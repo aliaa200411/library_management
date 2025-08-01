@@ -35,6 +35,12 @@
                             invisible="state != 'confirmed'"/>
                     <button name="action_view_invoice" type="object" string="📄 View Invoice"
                             invisible="not invoice_id"/>
+                    <button name="print_single_membership_report"
+                                string="🖨️ Print Membership Report"
+                                type="object"
+                                class="btn-secondary"
+                                />
+
                  </header>
 
                 </sheet>

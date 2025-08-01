@@ -16,8 +16,10 @@
         'views/library_menu.xml',
         'views/membership_views.xml',
         'views/product_views.xml',
-        'views/res_partner_views.xml'
-    ],
+        'views/res_partner_views.xml',
+        'views/single_membership_report_template.xml',
+        'views/multiple_membership_report_template.xml',
+  ],
     'installable': True,
     'application': True,
 }

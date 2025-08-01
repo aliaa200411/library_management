@@ -1,0 +1,28 @@
+<odoo>
+    <template id="report_single_membership_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2>Membership Report</h2>
+                         <p><strong>Registration Date:</strong> <t t-esc="doc.registration_date"/></p>
+                         <p><strong>End Date:</strong> <t t-esc="doc.end_date"/></p>
+                         <p><strong>Card ID:</strong> <t t-esc="doc.card_id"/></p>
+                         <p><strong>State:</strong> <t t-esc="doc.state"/></p>
+                  </div>
+            </t>
+        </t>
+    </template>
+
+
+
+     <report
+    id="action_report_single_memberships"
+    model="library.membership"
+    string="Membership Report"
+    report_type="qweb-pdf"
+    name="library_management.report_single_membership_template"
+    file="library_management.report_single_membership_template"
+    print_report_name="'Membership Report - %s' % (object.partner_id.name)"
+/>
+
+</odoo> 

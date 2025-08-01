@@ -579,3 +579,8 @@ msgstr "🧾 فواتير العضوية"
 msgid "🧾 Profile"
 msgstr "🧾 الملف الشخصي"
 
+
+#. module: library_management
+#: model_terms:ir.ui.view,arch_db:library_management.view_library_membership_form
+msgid "🖨️ Print Membership Report"
+msgstr "🖨️ طباعة تقرير العضوية"

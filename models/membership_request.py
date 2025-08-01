@@ -85,3 +85,10 @@ class LibraryMembership(models.Model):
                 'res_id': self.invoice_id.id,
                 'view_mode': 'form',
             }
+
+    def print_single_membership_report(self):
+        self.ensure_one()
+        return self.env.ref('library_management.action_report_single_memberships').report_action(self)
+
+    def print_multiple_membership_report(self):
+        return self.env.ref('library_management.action_report_multiple_memberships').report_action(self)
