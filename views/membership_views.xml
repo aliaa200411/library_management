@@ -60,6 +60,7 @@
                 <field name="end_date"/>
                 <field name="card_id"/>
                 <field name="state"/>
+               
             </list>
         </field>
     </record>
@@ -75,4 +76,5 @@
             </p>
         </field>
     </record>
+    
 </odoo>

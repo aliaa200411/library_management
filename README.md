@@ -15,3 +15,5 @@ This is a custom Odoo 18 Community module for managing a library system, includi
 1. Clone this repository into your Odoo `addons` directory:
    ```bash
    git clone https://github.com/aliaa200411/library_management.git
+
+
